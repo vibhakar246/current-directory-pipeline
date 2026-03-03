@@ -6,8 +6,9 @@ CURRENT_DIR=$(pwd)
 
 echo "Current Directory: $CURRENT_DIR"
 
-echo "Saving directory to file..."
-echo "Current Directory: $CURRENT_DIR" | sudo tee /opt/current-directory.txt > /dev/null
+echo "Saving directory name to file..."
+
+echo "$CURRENT_DIR" | sudo tee /opt/current-directory.txt > /dev/null
 
 echo "File saved at /opt/current-directory.txt"
 

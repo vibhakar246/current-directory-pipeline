@@ -24,9 +24,9 @@ pipeline {
         stage('Verify File') {
             steps {
                 sh '''
-                    if [ -f /opt/current-directory.txt ]; then
+                    if [ -f /opt/vibhakar.txt ]; then
                         echo "File exists"
-                        cat /opt/current-directory.txt
+                        ls -l /opt/vibhakar.txt
                     else
                         echo "File not found"
                         exit 1
@@ -41,3 +41,4 @@ pipeline {
         failure { echo "Pipeline failed!" }
     }
 }
+
